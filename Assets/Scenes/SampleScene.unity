@@ -495,7 +495,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 24300002, guid: 213c61bff6a82014397281e6f02189bc,
     type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1192,7 +1192,8 @@ MonoBehaviour:
   clipClick: {fileID: 8300000, guid: b0927a642a34e034195413672f6870b4, type: 3}
   clipImpact: {fileID: 8300000, guid: 7a5d8f65e0225d94995e2d6e7436ad31, type: 3}
   textLines:
-  - "\u3053\u3093\u3070\u3093\u308F <?impact> <?pause> "
+  - "<rot>\u3053\u3093\u3070\u3093\u308F</><?pause>."
+  - "\u306A\u3001\u306A\u3093\u3060\u3063\u3066\u30FC\uFF01<?impact><?pause>."
 --- !u!1 &2125274296
 GameObject:
   m_ObjectHideFlags: 0

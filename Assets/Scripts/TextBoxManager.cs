@@ -11,6 +11,7 @@ public class TextBoxManager : MonoBehaviour
     public AudioSource aSource;
     public AudioClip clipClick;
     public AudioClip clipImpact;
+    [SerializeField]
     public string[] textLines;
     
     int line_cnt;
@@ -37,13 +38,11 @@ public class TextBoxManager : MonoBehaviour
     // TextAnimatonPlayerから渡ってきたイベントハンドラ
     private void OnEvent(string message)
     {
+        Debug.Log(string.Format("recieved {0}", message));
         switch (message)
         {
             case "pause":
                 nextButton.gameObject.SetActive(true);
-                break;
-            case "click":
-                aSource.PlayOneShot(clipClick);
                 break;
             case "impact":
                 aSource.PlayOneShot(clipImpact);
@@ -58,6 +57,7 @@ public class TextBoxManager : MonoBehaviour
         {
             line_cnt++;
             ShowText();
+            aSource.PlayOneShot(clipClick);
             nextButton.gameObject.SetActive(false);
         }
     }
@@ -65,7 +65,7 @@ public class TextBoxManager : MonoBehaviour
     // textAnimatorPlayerを介してテキストを表示
     private void ShowText()
     {
-        if(line_cnt > textLines.Length)
+        if(line_cnt >= textLines.Length)
         {
             // 表示できないので空文字列を表示
             _player.ShowText(string.Empty);
