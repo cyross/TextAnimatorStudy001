@@ -1,0 +1,2 @@
+# TextAnimatorStudy001
+TextAnimatorというアセット、面白そうだったので試してみる
