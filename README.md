@@ -6,6 +6,7 @@ TextAnimatorというアセット、面白そうだったので試してみる
 
 * [Selected U3D Japanese Font](https://assetstore.unity.com/packages/2d/fonts/selected-u3d-japanese-font-337)
 * [Text Animator](https://assetstore.unity.com/packages/tools/gui/text-animator-158707)
+* TextMesh Proのインポーターを使って追加アセットをインストールしておいてください
 
 ## 参考リンク
 
